@@ -1,0 +1,1133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win, Fight, Love Like a Woman — Female Empowerment 80s Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Pacifico&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2a9d;
+            --neon-cyan: #00f0ff;
+            --neon-purple: #b14bff;
+            --neon-yellow: #ffe600;
+            --neon-orange: #ff7b00;
+            --soft-pink: #ffd6f0;
+            --soft-blue: #c7f6ff;
+            --soft-lavender: #e8d5ff;
+            --cream: #fff8f0;
+            --deep-purple: #4a0e78;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #fff0f8 0%, #f0fbff 30%, #f8f0ff 70%, #fff8e8 100%);
+            color: #2d1b4e;
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .font-script {
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* 80s chrome text effect */
+        .chrome-text {
+            background: linear-gradient(180deg, 
+                #ffffff 0%, 
+                #ffe6f8 20%, 
+                #ff8ad8 40%, 
+                #ff2a9d 50%, 
+                #b14bff 60%, 
+                #6b2cff 80%, 
+                #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 42, 157, 0.4);
+            filter: drop-shadow(3px 3px 0px rgba(0, 240, 255, 0.3));
+        }
+
+        .chrome-text-alt {
+            background: linear-gradient(180deg,
+                #ffffff 0%,
+                #c7f6ff 25%,
+                #00f0ff 50%,
+                #00a8ff 75%,
+                #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(3px 3px 0px rgba(255, 42, 157, 0.3));
+        }
+
+        /* Gradient backgrounds */
+        .gradient-hero {
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(255, 42, 157, 0.25) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 240, 255, 0.25) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(177, 75, 255, 0.15) 0%, transparent 60%),
+                linear-gradient(135deg, #fff0f8 0%, #f0fbff 50%, #f8f0ff 100%);
+        }
+
+        /* Fluid shapes */
+        .blob {
+            position: absolute;
+            border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+            filter: blur(1px);
+            animation: morph 8s ease-in-out infinite;
+            opacity: 0.7;
+        }
+
+        .blob-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(255, 42, 157, 0.4), rgba(177, 75, 255, 0.3));
+            top: 10%;
+            left: -5%;
+            animation-delay: 0s;
+        }
+
+        .blob-2 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.4), rgba(0, 120, 255, 0.3));
+            bottom: 10%;
+            right: -5%;
+            animation-delay: -2s;
+        }
+
+        .blob-3 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(255, 230, 0, 0.35), rgba(255, 123, 0, 0.25));
+            top: 40%;
+            right: 20%;
+            animation-delay: -4s;
+        }
+
+        @keyframes morph {
+            0%, 100% {
+                border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%;
+                transform: rotate(5deg) scale(1.05);
+            }
+            50% {
+                border-radius: 50% 50% 40% 60% / 60% 60% 40% 40%;
+                transform: rotate(-5deg) scale(1);
+            }
+            75% {
+                border-radius: 70% 30% 60% 40% / 30% 60% 50% 70%;
+                transform: rotate(3deg) scale(1.08);
+            }
+        }
+
+        /* Grid overlay */
+        .retro-grid {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.15) 1px, transparent 1px);
+            background-size: 60px 60px;
+            transform: perspective(500px) rotateX(60deg);
+            transform-origin: bottom;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* Neon glow buttons */
+        .btn-neon {
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255, 42, 157, 0.4), inset 0 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-neon:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(255, 42, 157, 0.6), inset 0 2px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-neon-cyan {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+            box-shadow: 0 4px 20px rgba(0, 240, 255, 0.4), inset 0 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-neon-cyan:hover {
+            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.6), inset 0 2px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-neon-yellow {
+            background: linear-gradient(135deg, var(--neon-yellow), var(--neon-orange));
+            color: #2d1b4e;
+            box-shadow: 0 4px 20px rgba(255, 230, 0, 0.4), inset 0 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-neon-yellow:hover {
+            box-shadow: 0 8px 30px rgba(255, 230, 0, 0.6), inset 0 2px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Card glass effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(177, 75, 255, 0.12);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(177, 75, 255, 0.2);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Geometric shapes */
+        .geo-shape {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid rgba(255, 230, 0, 0.3);
+        }
+
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 8px solid rgba(0, 240, 255, 0.3);
+        }
+
+        .zigzag {
+            width: 150px;
+            height: 40px;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 42, 157, 0.3),
+                rgba(255, 42, 157, 0.3) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        }
+
+        /* Marquee */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Navigation */
+        .nav-blur {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Section styling */
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Quote styling */
+        .quote-mark {
+            font-size: 6rem;
+            line-height: 1;
+            color: rgba(255, 42, 157, 0.2);
+            font-family: serif;
+        }
+
+        /* Input styling */
+        .neon-input {
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px solid rgba(177, 75, 255, 0.2);
+            border-radius: 16px;
+            padding: 14px 20px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .neon-input:focus {
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 20px rgba(255, 42, 157, 0.2);
+        }
+
+        /* Footer wave */
+        .wave-top {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-top svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+
+        /* Floating animation */
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Pulse glow */
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 42, 157, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(255, 42, 157, 0.7); }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fff0f8;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--neon-pink), var(--neon-purple));
+            border-radius: 5px;
+        }
+
+        /* Testimonial carousel */
+        .testimonial-card.active {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+
+        .testimonial-card {
+            opacity: 0;
+            transform: translateX(50px) scale(0.95);
+            transition: all 0.5s ease;
+            position: absolute;
+            width: 100%;
+        }
+
+        /* Confetti canvas */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .blob {
+                opacity: 0.4;
+            }
+            .blob-1 { width: 250px; height: 250px; }
+            .blob-2 { width: 200px; height: 200px; }
+            .blob-3 { width: 180px; height: 180px; }
+            .retro-grid { background-size: 40px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-cyan-400 flex items-center justify-center pulse-glow">
+                        <span class="text-white font-display font-bold text-lg">W</span>
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-wider bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+                        WFLW
+                    </span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-pink-500 font-medium transition-colors">About</a>
+                    <a href="#pillars" class="text-gray-700 hover:text-pink-500 font-medium transition-colors">Our Pillars</a>
+                    <a href="#stories" class="text-gray-700 hover:text-pink-500 font-medium transition-colors">Stories</a>
+                    <a href="#solidarity" class="text-gray-700 hover:text-pink-500 font-medium transition-colors">Solidarity</a>
+                    <a href="#join" class="btn-neon text-sm py-2 px-6">Join Us</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-white/95 backdrop-blur-lg shadow-2xl z-50 p-8 md:hidden">
+            <button id="close-menu" class="absolute top-6 right-6 text-gray-700">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="flex flex-col space-y-6 mt-16">
+                <a href="#about" class="text-xl font-display font-bold text-gray-800 hover:text-pink-500">About</a>
+                <a href="#pillars" class="text-xl font-display font-bold text-gray-800 hover:text-pink-500">Our Pillars</a>
+                <a href="#stories" class="text-xl font-display font-bold text-gray-800 hover:text-pink-500">Stories</a>
+                <a href="#solidarity" class="text-xl font-display font-bold text-gray-800 hover:text-pink-500">Solidarity</a>
+                <a href="#join" class="btn-neon text-center">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden pt-20">
+        <!-- Decorative blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        
+        <!-- Geometric shapes -->
+        <div class="geo-shape triangle top-32 left-10 float" style="animation-delay: 0s;"></div>
+        <div class="geo-shape circle bottom-32 left-20 float" style="animation-delay: 1s;"></div>
+        <div class="geo-shape zigzag top-40 right-16 float" style="animation-delay: 2s;"></div>
+        
+        <!-- Retro grid -->
+        <div class="retro-grid"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="gsap-hero">
+                <p class="font-script text-2xl md:text-3xl text-pink-500 mb-4">The 80s are calling...</p>
+                <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-6 chrome-text">
+                    Win, Fight,<br>
+                    Love Like a Woman
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    A movement celebrating female courage, solidarity, and emotion. 
+                    Because being a woman means winning with heart, fighting with grace, 
+                    and loving without limits.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#join" class="btn-neon text-lg">Join the Movement</a>
+                    <a href="#stories" class="btn-neon-cyan text-lg">Read Our Stories</a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="glass-card p-6 gsap-stat">
+                    <div class="text-4xl font-display font-bold text-pink-500 counter" data-target="50000">0</div>
+                    <p class="text-gray-600 mt-2 font-medium">Women Empowered</p>
+                </div>
+                <div class="glass-card p-6 gsap-stat">
+                    <div class="text-4xl font-display font-bold text-cyan-500 counter" data-target="120">0</div>
+                    <p class="text-gray-600 mt-2 font-medium">Local Communities</p>
+                </div>
+                <div class="glass-card p-6 gsap-stat">
+                    <div class="text-4xl font-display font-bold text-purple-500 counter" data-target="365">0</div>
+                    <p class="text-gray-600 mt-2 font-medium">Days of Support</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400">
+        <div class="marquee-container">
+            <div class="marquee-content font-display font-bold text-white text-lg tracking-widest">
+                ❤ WIN LIKE A WOMAN ★ FIGHT LIKE A WOMAN ♥ LOVE LIKE A WOMAN ★ SOLIDARITY FOREVER ❤ COURAGE OVER FEAR ★ EMPOWERMENT FOR ALL ❤ WIN LIKE A WOMAN ★ FIGHT LIKE A WOMAN ♥ LOVE LIKE A WOMAN ★ SOLIDARITY FOREVER ❤ COURAGE OVER FEAR ★ EMPOWERMENT FOR ALL ❤
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative overflow-hidden">
+        <div class="geo-shape circle top-20 right-10 opacity-50"></div>
+        <div class="geo-shape triangle bottom-20 left-10 opacity-50" style="transform: rotate(180deg);"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="gsap-fade-right">
+                    <p class="font-script text-2xl text-cyan-500 mb-2">Our Why</p>
+                    <h2 class="section-title text-4xl md:text-5xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400">
+                        More Than a Movement
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Inspired by the bold, unapologetic spirit of the 80s, we created a space where women 
+                        lift each other up. This isn't about competition in the traditional sense — it's about 
+                        the courage to show up, the strength to keep going, and the love that binds us together.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        We believe every woman deserves to feel powerful in her own skin. Through storytelling, 
+                        community building, and grassroots action, we're rewriting what it means to win.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center space-x-2 bg-white/60 px-4 py-2 rounded-full shadow-sm">
+                            <span class="text-2xl">💪</span>
+                            <span class="font-semibold text-gray-700">Strength</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white/60 px-4 py-2 rounded-full shadow-sm">
+                            <span class="text-2xl">❤️</span>
+                            <span class="font-semibold text-gray-700">Compassion</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white/60 px-4 py-2 rounded-full shadow-sm">
+                            <span class="text-2xl">🤝</span>
+                            <span class="font-semibold text-gray-700">Unity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative gsap-fade-left">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 rounded-3xl transform rotate-3 opacity-30"></div>
+                    <div class="relative glass-card p-8 md:p-12">
+                        <div class="quote-mark absolute -top-8 -left-4">"</div>
+                        <p class="text-2xl md:text-3xl font-medium text-gray-800 leading-relaxed italic mb-6">
+                            When women support each other, incredible things happen. We don't just break glass 
+                            ceilings — we build elevators for the women coming after us.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-white font-bold text-xl">
+                                J
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800">Jenny</p>
+                                <p class="text-gray-600">Founder & Dreamer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section id="pillars" class="py-24 relative bg-gradient-to-b from-white/30 to-pink-50/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 gsap-fade-up">
+                <p class="font-script text-2xl text-purple-500 mb-2">The Heart of Everything</p>
+                <h2 class="section-title text-4xl md:text-5xl mb-6 text-gray-800">Our Three Pillars</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Built on the belief that true power comes from within, these pillars guide every 
+                    initiative, story, and action we take.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Win -->
+                <div class="glass-card p-8 text-center gsap-card group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-pink-600"></div>
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-pink-300 to-pink-500 flex items-center justify-center text-white text-4xl shadow-lg group-hover:scale-110 transition-transform">
+                        🏆
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Win</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Redefining victory on our own terms. Winning means overcoming doubt, celebrating 
+                        small victories, and knowing our worth every single day.
+                    </p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-pink-500 mr-2">★</span> Personal growth</li>
+                        <li class="flex items-center"><span class="text-pink-500 mr-2">★</span> Career victories</li>
+                        <li class="flex items-center"><span class="text-pink-500 mr-2">★</span> Daily courage</li>
+                    </ul>
+                </div>
+
+                <!-- Fight -->
+                <div class="glass-card p-8 text-center gsap-card group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-cyan-400 to-cyan-600"></div>
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-500 flex items-center justify-center text-white text-4xl shadow-lg group-hover:scale-110 transition-transform">
+                        ⚡
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Fight</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Standing up for ourselves and each other. Fighting for equality, respect, and 
+                        the right to take up space in every room we enter.
+                    </p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-cyan-500 mr-2">★</span> Advocacy</li>
+                        <li class="flex items-center"><span class="text-cyan-500 mr-2">★</span> Boundaries</li>
+                        <li class="flex items-center"><span class="text-cyan-500 mr-2">★</span> Justice</li>
+                    </ul>
+                </div>
+
+                <!-- Love -->
+                <div class="glass-card p-8 text-center gsap-card group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-400 to-purple-600"></div>
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-300 to-purple-500 flex items-center justify-center text-white text-4xl shadow-lg group-hover:scale-110 transition-transform">
+                        💜
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Love</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The radical act of caring deeply. Loving ourselves, our sisters, and our communities 
+                        with openness, forgiveness, and fierce loyalty.
+                    </p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-purple-500 mr-2">★</span> Self-acceptance</li>
+                        <li class="flex items-center"><span class="text-purple-500 mr-2">★</span> Sisterhood</li>
+                        <li class="flex items-center"><span class="text-purple-500 mr-2">★</span> Community care</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section id="stories" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 gsap-fade-up">
+                <p class="font-script text-2xl text-pink-500 mb-2">Voices That Inspire</p>
+                <h2 class="section-title text-4xl md:text-5xl mb-6 text-gray-800">Stories of Courage</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Real women. Real struggles. Real triumphs. These stories remind us we're never alone.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Story 1 -->
+                <div class="glass-card overflow-hidden gsap-card">
+                    <div class="h-48 bg-gradient-to-br from-pink-300 via-purple-300 to-cyan-300 flex items-center justify-center">
+                        <span class="text-6xl">🦋</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">Maria's Second Act</h3>
+                        <p class="text-gray-600 mb-4">
+                            After 20 years in a career that no longer fit, Maria found the courage to start over. 
+                            At 48, she opened her own design studio.
+                        </p>
+                        <button class="text-pink-500 font-bold hover:text-pink-600 transition-colors read-more-btn">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="glass-card overflow-hidden gsap-card">
+                    <div class="h-48 bg-gradient-to-br from-cyan-300 via-blue-300 to-purple-300 flex items-center justify-center">
+                        <span class="text-6xl">🌟</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">The Sisterhood Circle</h3>
+                        <p class="text-gray-600 mb-4">
+                            A group of strangers became family through weekly meetings. Together, they weathered 
+                            loss, celebrated joy, and built unshakable bonds.
+                        </p>
+                        <button class="text-cyan-500 font-bold hover:text-cyan-600 transition-colors read-more-btn">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="glass-card overflow-hidden gsap-card">
+                    <div class="h-48 bg-gradient-to-br from-yellow-200 via-pink-300 to-purple-300 flex items-center justify-center">
+                        <span class="text-6xl">🔥</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">Aisha Speaks Up</h3>
+                        <p class="text-gray-600 mb-4">
+                            Aisha turned her experience with workplace discrimination into a city-wide campaign 
+                            that changed policy for thousands of women.
+                        </p>
+                        <button class="text-purple-500 font-bold hover:text-purple-600 transition-colors read-more-btn">Read More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solidarity Section -->
+    <section id="solidarity" class="py-24 relative bg-gradient-to-br from-pink-50 via-purple-50 to-cyan-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative gsap-fade-right">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-card p-6 text-center transform translate-y-8">
+                            <div class="text-4xl mb-2">🌈</div>
+                            <h4 class="font-bold text-gray-800">Inclusive</h4>
+                            <p class="text-sm text-gray-600 mt-2">All women, all identities, all stories welcome.</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <div class="text-4xl mb-2">🌍</div>
+                            <h4 class="font-bold text-gray-800">Global</h4>
+                            <p class="text-sm text-gray-600 mt-2">Communities in 40+ countries and growing.</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <div class="text-4xl mb-2">🎤</div>
+                            <h4 class="font-bold text-gray-800">Loud</h4>
+                            <p class="text-sm text-gray-600 mt-2">We speak up and amplify voices.</p>
+                        </div>
+                        <div class="glass-card p-6 text-center transform translate-y-8">
+                            <div class="text-4xl mb-2">💝</div>
+                            <h4 class="font-bold text-gray-800">Caring</h4>
+                            <p class="text-sm text-gray-600 mt-2">Mental health and wellness first.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gsap-fade-left">
+                    <p class="font-script text-2xl text-purple-500 mb-2">Together We Rise</p>
+                    <h2 class="section-title text-4xl md:text-5xl mb-6 text-gray-800">Solidarity in Action</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Solidarity isn't just a word — it's a practice. It's showing up for the woman beside you, 
+                        even when you have nothing to gain. It's creating spaces where vulnerability is strength 
+                        and asking for help is an act of courage.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        Through mentorship programs, emergency support funds, and community events, we turn 
+                        compassion into tangible change.
+                    </p>
+                    <a href="#join" class="btn-neon-yellow text-lg inline-block">Be Part of It</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 gsap-fade-up">
+                <p class="font-script text-2xl text-cyan-500 mb-2">Sisterhood Stories</p>
+                <h2 class="section-title text-4xl md:text-5xl mb-6 text-gray-800">What Women Say</h2>
+            </div>
+
+            <div class="relative h-80 md:h-64" id="testimonial-container">
+                <div class="testimonial-card active glass-card p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
+                            S
+                        </div>
+                        <div>
+                            <p class="text-xl text-gray-700 italic mb-4">"This community gave me the courage to leave a toxic relationship and rebuild my life. I'll never forget the women who held my hand."</p>
+                            <p class="font-bold text-gray-800">— Sarah, 34</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
+                            L
+                        </div>
+                        <div>
+                            <p class="text-xl text-gray-700 italic mb-4">"I found my business partner, my best friend, and my voice here. Women supporting women is the most powerful force on earth."</p>
+                            <p class="font-bold text-gray-800">— Leila, 29</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
+                            T
+                        </div>
+                        <div>
+                            <p class="text-xl text-gray-700 italic mb-4">"For the first time, I felt like I could be soft and strong at the same time. That's the magic of this movement."</p>
+                            <p class="font-bold text-gray-800">— Tanisha, 42</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center space-x-3 mt-8">
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-pink-500 transition-all" data-index="0"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all" data-index="1"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-pink-300 transition-all" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-pink-100/50 via-purple-100/50 to-cyan-100/50"></div>
+        <div class="geo-shape triangle top-10 right-20 opacity-40"></div>
+        <div class="geo-shape circle bottom-10 left-20 opacity-40"></div>
+        
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 md:p-16 text-center gsap-fade-up">
+                <p class="font-script text-2xl text-pink-500 mb-2">Your Journey Starts Here</p>
+                <h2 class="section-title text-4xl md:text-5xl mb-6 text-gray-800">Join the Movement</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Be the first to know about events, stories, and ways to get involved. Together, 
+                    we'll win, fight, and love like the women we are.
+                </p>
+                
+                <form id="join-form" class="max-w-xl mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                        <input type="text" placeholder="Your Name" class="neon-input flex-1" required>
+                        <input type="email" placeholder="Your Email" class="neon-input flex-1" required>
+                    </div>
+                    <textarea placeholder="Tell us what empowerment means to you (optional)" rows="3" class="neon-input w-full mb-4 resize-none"></textarea>
+                    <button type="submit" class="btn-neon w-full sm:w-auto text-lg">Sign Up Now</button>
+                </form>
+
+                <div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-xl">
+                    🎉 Welcome to the sisterhood! Check your inbox for a warm welcome.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-gradient-to-br from-purple-900 via-pink-900 to-cyan-900 text-white pt-24 pb-8">
+        <div class="wave-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#fff"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 flex items-center justify-center">
+                            <span class="text-white font-display font-bold text-lg">W</span>
+                        </div>
+                        <span class="font-display font-bold text-2xl">WFLW</span>
+                    </div>
+                    <p class="text-gray-300 max-w-md leading-relaxed">
+                        A vibrant movement celebrating female empowerment, courage, solidarity, and emotion. 
+                        Win, fight, love — like a woman.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4 text-pink-300">Explore</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#pillars" class="hover:text-white transition-colors">Our Pillars</a></li>
+                        <li><a href="#stories" class="hover:text-white transition-colors">Stories</a></li>
+                        <li><a href="#solidarity" class="hover:text-white transition-colors">Solidarity</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4 text-cyan-300">Connect</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">TikTok</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2026 Win, Fight, Love Like a Woman. All rights reserved.</p>
+                <p class="text-gray-400 text-sm mt-2 md:mt-0">Made with 💜 by women, for women.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        // Close mobile menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        });
+
+        // Hero animation
+        gsap.from('.gsap-hero > *', {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: 'power3.out'
+        });
+
+        gsap.from('.gsap-stat', {
+            scrollTrigger: {
+                trigger: '.gsap-stat',
+                start: 'top 80%'
+            },
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'back.out(1.7)'
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            gsap.to(counter, {
+                scrollTrigger: {
+                    trigger: counter,
+                    start: 'top 85%'
+                },
+                innerHTML: target,
+                duration: 2,
+                snap: { innerHTML: 1 },
+                ease: 'power2.out',
+                onUpdate: function() {
+                    counter.innerHTML = Math.ceil(this.targets()[0].innerHTML).toLocaleString();
+                }
+            });
+        });
+
+        // Fade up animations
+        gsap.utils.toArray('.gsap-fade-up').forEach(elem => {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: 'top 85%'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: 'power3.out'
+            });
+        });
+
+        // Fade right/left animations
+        gsap.utils.toArray('.gsap-fade-right').forEach(elem => {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: 'top 80%'
+                },
+                x: -60,
+                opacity: 0,
+                duration: 0.9,
+                ease: 'power3.out'
+            });
+        });
+
+        gsap.utils.toArray('.gsap-fade-left').forEach(elem => {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: 'top 80%'
+                },
+                x: 60,
+                opacity: 0,
+                duration: 0.9,
+                ease: 'power3.out'
+            });
+        });
+
+        // Card stagger animations
+        gsap.utils.toArray('.gsap-card').forEach((elem, i) => {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: 'top 85%'
+                },
+                y: 60,
+                opacity: 0,
+                duration: 0.7,
+                delay: i * 0.1,
+                ease: 'power3.out'
+            });
+        });
+
+        // Testimonial carousel
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonialCards.forEach((card, i) => {
+                card.classList.remove('active');
+                testimonialDots[i].classList.remove('bg-pink-500');
+                testimonialDots[i].classList.add('bg-pink-300');
+            });
+            testimonialCards[index].classList.add('active');
+            testimonialDots[index].classList.remove('bg-pink-300');
+            testimonialDots[index].classList.add('bg-pink-500');
+        }
+
+        testimonialDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentTestimonial = parseInt(dot.getAttribute('data-index'));
+                showTestimonial(currentTestimonial);
+            });
+        });
+
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Form submission
+        const joinForm = document.getElementById('join-form');
+        const formSuccess = document.getElementById('form-success');
+
+        joinForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            joinForm.reset();
+            fireConfetti();
+        });
+
+        // Read more buttons interaction
+        document.querySelectorAll('.read-more-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Full story coming soon! Stay tuned to our newsletter.');
+            });
+        });
+
+        // Confetti effect
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationId = null;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        function createParticle() {
+            const colors = ['#ff2a9d', '#00f0ff', '#b14bff', '#ffe600', '#ff7b00'];
+            return {
+                x: Math.random() * canvas.width,
+                y: -10,
+                size: Math.random() * 8 + 4,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                speedY: Math.random() * 3 + 2,
+                speedX: Math.random() * 2 - 1,
+                rotation: Math.random() * 360,
+                rotationSpeed: Math.random() * 4 - 2
+            };
+        }
+
+        function fireConfetti() {
+            particles = [];
+            for (let i = 0; i < 100; i++) {
+                particles.push(createParticle());
+            }
+            if (!animationId) animateConfetti();
+        }
+
+        function animateConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach((p, index) => {
+                p.y += p.speedY;
+                p.x += p.speedX;
+                p.rotation += p.rotationSpeed;
+                
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate((p.rotation * Math.PI) / 180);
+                ctx.fillStyle = p.color;
+                ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+                ctx.restore();
+                
+                if (p.y > canvas.height) {
+                    particles.splice(index, 1);
+                }
+            });
+            
+            if (particles.length > 0) {
+                animationId = requestAnimationFrame(animateConfetti);
+            } else {
+                animationId = null;
+            }
+        }
+
+        // Parallax effect for blobs
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            gsap.to('.blob-1', { x: x * 30, y: y * 30, duration: 1 });
+            gsap.to('.blob-2', { x: -x * 40, y: -y * 40, duration: 1 });
+            gsap.to('.blob-3', { x: x * 20, y: -y * 20, duration: 1 });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
